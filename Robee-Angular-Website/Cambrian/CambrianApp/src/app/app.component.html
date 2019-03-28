@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div class = "container" style="text-align:center">
+{{ "click: " + click + " Display " + displayLogin + " list: "+ listData}}
+  <h1>
+    {{ title }} 
+    
+  </h1>
+  
+  <button (click)=onClick(value)>Sign in</button>
+  <!--<div *ngIf = "displayLogin; then Login else List"></div>-->
+  <ng-template [ngIf] = "displayLogin">
+    <h2>{{ message }}</h2>
+    <app-login (userEvent)="message=$event" [cambrianData] = "title"></app-login>
+  </ng-template>
+  <br>
+
+  <button (click)=listClick(value)>List</button>
+  <ng-template [ngIf] = "listData">
+    <h2>{{ message }}</h2>
+    <app-airline></app-airline>
+  </ng-template>
+  
+ 
+</div>

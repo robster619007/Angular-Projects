@@ -1,0 +1,13 @@
+<dl *ngFor = "let cx of cambrian">
+  <dt>Data ID: {{cx.id}}</dt>
+  <dt>Airline Name</dt>
+    <dd>{{cx.name}}</dd>
+  <dt>Country</dt>
+    <dd>{{cx.Country}}</dd>
+----------------------------
+</dl>
+
+
+Name<input [(ngModel)]= 'airlineName' type = 'text' ><br>
+{{airlineName}}<br>
+Country<input type = 'text'>
